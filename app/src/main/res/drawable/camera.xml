@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="512dp"
+    android:height="512dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <path
+        android:fillColor="#708299"
+        android:pathData="M480 416h-448c-17.671875 0-32-14.328125-32-32v-288c0-17.671875 14.328125-32 32-32h115.503906l9.953125-39.761719c3.558594-14.242187 16.355469-24.23437475 31.039063-24.238281h135.007812c14.683594 0.00390625 27.480469 9.996094 31.039063 24.238281l9.953125 39.761719h115.503906c17.671875 0 32 14.328125 32 32v288c0 17.671875-14.328125 32-32 32zm0 0" />
+    <path
+        android:fillColor="#68788e"
+        android:pathData="M480 368h-448c-17.671875 0-32-14.328125-32-32v48c0 17.671875 14.328125 32 32 32h448c17.671875 0 32-14.328125 32-32v-48c0 17.671875-14.328125 32-32 32zm0 0" />
+    <path
+        android:fillColor="#f8d539"
+        android:pathData="M0 144h512v192h-512zm0 0" />
+    <path
+        android:fillColor="#57565c"
+        android:pathData="M368 240c0 61.855469-50.144531 112-112 112s-112-50.144531-112-112 50.144531-112 112-112 112 50.144531 112 112zm0 0" />
+    <path
+        android:fillColor="#92c5ff"
+        android:pathData="M336 240c0 44.183594-35.816406 80-80 80s-80-35.816406-80-80 35.816406-80 80-80 80 35.816406 80 80zm0 0" />
+    <path
+        android:fillColor="#fff"
+        android:pathData="M304 240h-32c0-8.835938-7.164062-16-16-16v-32c26.507812 0 48 21.492188 48 48zm0 0" />
+    <path
+        android:fillColor="#f8d539"
+        android:pathData="M224 48h64c8.835938 0 16 7.164062 16 16s-7.164062 16-16 16h-64c-8.835938 0-16-7.164062-16-16s7.164062-16 16-16zm0 0" />
+    <path
+        android:fillColor="#fff"
+        android:pathData="M448 176h32v32h-32zm0 0" />
+    <path
+        android:fillColor="#fff"
+        android:pathData="M448 240h32v32h-32zm0 0" />
+    <path
+        android:fillColor="#78bcff"
+        android:pathData="M256 288c-38-0.046875-70.746094-26.777344-78.398438-64-6.457031 31.785156 6.921876 64.324219 33.863282 82.378906 26.945312 18.054688 62.125 18.054688 89.070312 0 26.941406-18.054687 40.320313-50.59375 33.863282-82.378906-7.652344 37.222656-40.398438 63.953125-78.398438 64zm0 0" />
+</vector>

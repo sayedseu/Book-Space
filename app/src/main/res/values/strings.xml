@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">Book Space</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="interested">Interested</string>
+    <string name="upload">Upload</string>
+    <string name="profile">Profile</string>
+    <string name="category">Category</string>
+    <string name="search">Search</string>
+    <string name="logout">Log Out</string>
+    <string name="select_image">Select Image</string>
+    <string name="please_select_a_mode">Please select a mode !</string>
+    <string name="book_name">Book Name</string>
+    <string name="author_name">Author Name</string>
+    <string name="publication_year">Publication Year</string>
+    <string name="book_edition">Book Edition</string>
+    <string name="isbn_number_optional">ISBN Number (Optional)</string>
+    <string name="book_price">Book Price</string>
+    <string name="please_select_all_field">Please select all field !</string>
+    <string name="academic">Academic</string>
+    <string name="non_academic">Non-Academic</string>
+    <string name="please_select_a_category">Please select a category !</string>
+    <string name="please_select_a_location">Please select a location !</string>
+    <string name="please_select_a_condition">Please select a condition !</string>
+    <string name="place_book_for_sale">upload Book</string>
+    <string name="sign_up">SignUp</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="app_logo">App Logo</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="signup">SignUp</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="login_with_social_media">LOGIN WITH SOCIAL MEDIA</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="image">Image</string>
+    <string name="icon">Icon</string>
+    <string name="please_filed_all_field">Please filed all field!</string>
+    <string name="add_at_least_3_photo">Add at least 1 photo !</string>
+    <string name="confirm">confirm</string>
+    <string name="upload_successful">Successful</string>
+    <string name="loginErrorMessage">Incorrect phone number or password!</string>
+    <string name="signupErrorMessage">Phone number already used!</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="update">UPDATE</string>
+    <string name="faq">FAQ</string>
+    <string name="how_it_works">How It Works?</string>
+    <string name="change_account_setting">Change Account Setting</string>
+    <string name="my_interests_list">My Interests List</string>
+    <string name="owner_expected_book">Owner Expected Book</string>
+    <string name="delete">Delete</string>
+    <string name="bookimage">BookImage</string>
+    <string name="empty_list">Empty List</string>
+    <string name="enter_the_mobile_number">Enter the mobile number</string>
+    <string name="_017">01###-######</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="otp_hint"># # # #</string>
+    <string name="verify">Verify</string>
+    <string name="enter_the_otp_received_on">Enter the OTP received on</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="are_you_student">Are You Student?</string>
+    <string name="education_level">Education Level:</string>
+    <string name="school">School</string>
+    <string name="collage">Collage</string>
+    <string name="university">University</string>
+    <string name="none">None</string>
+    <string name="phone_email">Phone/Email</string>
+    <string name="please_wait">Please Wait..</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="reset">RESET</string>
+
+    <string-array name="academic_category_spinner">
+        <item>Select Category</item>
+        <item>School</item>
+        <item>Collage</item>
+        <item>University</item>
+        <item>Engineering</item>
+        <item>Medical</item>
+    </string-array>
+
+    <string-array name="non_academic_category_spinner">
+        <item>Select Category</item>
+        <item>Adventure</item>
+        <item>Detective</item>
+        <item>Science Fiction</item>
+        <item>Novel</item>
+        <item>Comic</item>
+        <item>Biography</item>
+        <item>Essay</item>
+        <item>Periodicals</item>
+        <item>Development</item>
+    </string-array>
+
+    <string-array name="city_list">
+        <item>Select Location</item>
+        <item>Dhanmondi</item>
+        <item>Mohammadpur</item>
+        <item>Ramna</item>
+        <item>Tejgaon</item>
+        <item>Gulshan</item>
+        <item>Cantonment</item>
+        <item>Demra</item>
+        <item>Hazaribagh</item>
+        <item>Shyampur</item>
+        <item>Badda</item>
+        <item>Kafrul</item>
+        <item>Khilgaon</item>
+        <item>Mirpur</item>
+        <item>Uttara</item>
+        <item>Biman Bandar</item>
+        <item>Paltan</item>
+        <item>Adabar</item>
+        <item>Darus</item>
+        <item>Kamrangirchar</item>
+        <item>Rampura</item>
+        <item>Jatrabari</item>
+        <item>Sherebangla Nagar </item>
+        <item>Tejgaon Industrial</item>
+        <item>Shahjahanpur</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomRadioButton">
+        <attr name="setImageDrawable" format="reference" />
+        <attr name="setCondition" format="string" />
+        <attr name="setCheck" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="UploadLabelView">
+        <attr name="setLabelIcon" format="reference" />
+        <attr name="setLabel" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="setLabelName" format="string" />
+        <attr name="setLabelValue" format="string" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.upload.UploadFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.bookspace.custom.UploadLabelView
+            android:id="@+id/photo_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setLabel="Add Photo"
+            app:setLabelIcon="@drawable/ic_check" />
+
+        <ImageView
+            android:id="@+id/select_image3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:clickable="true"
+            android:contentDescription="@string/select_image"
+            android:focusable="true"
+            android:src="@drawable/add_image"
+            app:layout_constraintBottom_toBottomOf="@+id/select_image2"
+            app:layout_constraintStart_toEndOf="@+id/select_image2"
+            app:layout_constraintTop_toTopOf="@+id/select_image2" />
+
+        <ImageView
+            android:id="@+id/select_image2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:contentDescription="@string/select_image"
+            android:focusable="true"
+            android:src="@drawable/add_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo_label" />
+
+        <ImageView
+            android:id="@+id/select_image1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:contentDescription="@string/select_image"
+            android:focusable="true"
+            android:src="@drawable/add_image"
+            app:layout_constraintBottom_toBottomOf="@+id/select_image2"
+            app:layout_constraintEnd_toStartOf="@+id/select_image2"
+            app:layout_constraintTop_toTopOf="@+id/select_image2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/photo_warning_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/add_at_least_3_photo"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#D50000"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/select_image2" />
+
+        <com.example.bookspace.custom.UploadLabelView
+            android:id="@+id/select_mode_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/photo_warning_tv"
+            app:layout_constraintTop_toBottomOf="@+id/photo_warning_tv"
+            app:setLabel="Select Mode"
+            app:setLabelIcon="@drawable/ic_check" />
+
+        <com.example.bookspace.custom.CustomRadioButton
+            android:id="@+id/sell_radio_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/select_mode_label"
+            app:layout_constraintTop_toBottomOf="@+id/select_mode_label"
+            app:setCondition="Sell"
+            app:setImageDrawable="@drawable/sell_book" />
+
+        <com.example.bookspace.custom.CustomRadioButton
+            android:id="@+id/donate_radio_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/sell_radio_bt"
+            app:layout_constraintStart_toStartOf="@+id/sell_radio_bt"
+            app:layout_constraintTop_toBottomOf="@+id/sell_radio_bt"
+            app:setCondition="Donate"
+            app:setImageDrawable="@drawable/donate_book" />
+
+
+        <com.example.bookspace.custom.CustomRadioButton
+            android:id="@+id/rent_radio_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/donate_radio_bt"
+            app:layout_constraintStart_toStartOf="@+id/donate_radio_bt"
+            app:layout_constraintTop_toBottomOf="@+id/donate_radio_bt"
+            app:setCondition="Rent"
+            app:setImageDrawable="@drawable/rent" />
+
+        <com.example.bookspace.custom.CustomRadioButton
+            android:id="@+id/exchange_radio_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/rent_radio_bt"
+            app:layout_constraintStart_toStartOf="@+id/rent_radio_bt"
+            app:layout_constraintTop_toBottomOf="@+id/rent_radio_bt"
+            app:setCondition="Exchange"
+            app:setImageDrawable="@drawable/exchange_book" />
+
+        <com.example.bookspace.custom.CustomRadioButton
+            android:id="@+id/exchange_with_cash_radio_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/exchange_radio_bt"
+            app:layout_constraintStart_toStartOf="@+id/exchange_radio_bt"
+            app:layout_constraintTop_toBottomOf="@+id/exchange_radio_bt"
+            app:setCondition="Exchange With Cash"
+            app:setImageDrawable="@drawable/exchange_with_cash" />
+
+        <TextView
+            android:id="@+id/mode_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/please_select_a_mode"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#D50000"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exchange_with_cash_radio_bt" />
+
+        <com.example.bookspace.custom.UploadLabelView
+            android:id="@+id/expectBookLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/mode_warning"
+            app:layout_constraintTop_toBottomOf="@+id/mode_warning"
+            app:setLabel="Expected Book"
+            app:setLabelIcon="@drawable/ic_check">
+
+        </com.example.bookspace.custom.UploadLabelView>
+
+        <ImageView
+            android:id="@+id/expected_image1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/select_image"
+            android:src="@drawable/add_image"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/expected_image3"
+            app:layout_constraintEnd_toStartOf="@+id/expected_image3"
+            app:layout_constraintTop_toTopOf="@+id/expected_image3" />
+
+        <ImageView
+            android:id="@+id/expected_image2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/select_image"
+            android:src="@drawable/add_image"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/expected_image3"
+            app:layout_constraintStart_toEndOf="@+id/expected_image3"
+            app:layout_constraintTop_toTopOf="@+id/expected_image3" />
+
+        <ImageView
+            android:id="@+id/expected_image3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/select_image"
+            android:src="@drawable/add_image"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/expectBookLabel"
+            app:layout_constraintStart_toStartOf="@+id/expectBookLabel"
+            app:layout_constraintTop_toBottomOf="@+id/expectBookLabel" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/expectedAuthorNameTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/author_name"
+            android:visibility="gone"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/expectedBookNameTextInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/expectedBookNameTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/expectedBookNameTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/expectedAuthorNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/expectedBookNameTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="25dp"
+            android:hint="@string/book_name"
+            android:visibility="gone"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/expectBookLabel"
+            app:layout_constraintStart_toStartOf="@+id/expectBookLabel"
+            app:layout_constraintTop_toBottomOf="@+id/expected_image3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/expectedBookNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/expectedPriceTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/book_price"
+            android:visibility="gone"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/expectedAuthorNameTextInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/expectedAuthorNameTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/expectedAuthorNameTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/expectedPriceET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/expected_book_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/please_filed_all_field"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#D50000"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expectedPriceTextInputLayout" />
+
+
+        <com.example.bookspace.custom.UploadLabelView
+            android:id="@+id/book_details_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/expected_book_warning"
+            app:layout_constraintTop_toBottomOf="@+id/expected_book_warning"
+            app:setLabel="Book Details"
+            app:setLabelIcon="@drawable/ic_check" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/bookNameTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="25dp"
+            android:hint="@string/book_name"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/book_details_label"
+            app:layout_constraintStart_toStartOf="@+id/book_details_label"
+            app:layout_constraintTop_toBottomOf="@+id/book_details_label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bookNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/authorNameTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/author_name"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/bookNameTextInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/bookNameTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/bookNameTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/authorET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/publicationYearTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/publication_year"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/authorNameTextInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/authorNameTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/authorNameTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/publicationET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/bookEditionTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/book_edition"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/publicationYearTextInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/publicationYearTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/publicationYearTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editionET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/isbnNumberTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/isbn_number_optional"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/bookEditionTextInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/bookEditionTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/bookEditionTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/isbnET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/bookPriceTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/book_price"
+            android:visibility="gone"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/isbnNumberTextInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/isbnNumberTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/isbnNumberTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/priceET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/bookDetailsWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/please_select_all_field"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#D50000"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookPriceTextInputLayout" />
+
+        <com.example.bookspace.custom.UploadLabelView
+            android:id="@+id/selectCategoryLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/bookDetailsWarning"
+            app:layout_constraintStart_toStartOf="@+id/bookDetailsWarning"
+            app:layout_constraintTop_toBottomOf="@+id/bookDetailsWarning"
+            app:setLabel="Select Category"
+            app:setLabelIcon="@drawable/ic_check" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/selectCategoryMaterialButtonToggleGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/selectCategoryLabel"
+            app:layout_constraintStart_toStartOf="@+id/selectCategoryLabel"
+            app:layout_constraintTop_toBottomOf="@+id/selectCategoryLabel"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/academicMB"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/academic" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/nonAcademicMB"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non_academic" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/selectCategoryMaterialButtonToggleGroup"
+            app:layout_constraintStart_toStartOf="@+id/selectCategoryMaterialButtonToggleGroup"
+            app:layout_constraintTop_toBottomOf="@+id/selectCategoryMaterialButtonToggleGroup" />
+
+        <TextView
+            android:id="@+id/selectCategoryWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/please_select_a_category"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#D50000"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categorySpinner" />
+
+        <com.example.bookspace.custom.UploadLabelView
+            android:id="@+id/selectLocationLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/selectCategoryWarning"
+            app:layout_constraintTop_toBottomOf="@+id/selectCategoryWarning"
+            app:setLabel="Select Location"
+            app:setLabelIcon="@drawable/ic_check" />
+
+        <Spinner
+            android:id="@+id/selectLocationSpinner"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="50dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/selectLocationLabel"
+            app:layout_constraintStart_toStartOf="@+id/selectLocationLabel"
+            app:layout_constraintTop_toBottomOf="@+id/selectLocationLabel" />
+
+
+        <TextView
+            android:id="@+id/selectLocationWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/please_select_a_location"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#D50000"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectLocationSpinner" />
+
+        <com.example.bookspace.custom.UploadLabelView
+            android:id="@+id/bookConditionLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/selectLocationWarning"
+            app:layout_constraintTop_toBottomOf="@+id/selectLocationWarning"
+            app:setLabel="Book Condition"
+            app:setLabelIcon="@drawable/ic_check" />
+
+        <com.example.bookspace.custom.CustomRadioButton
+            android:id="@+id/newConditionRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookConditionLabel"
+            app:setCondition="New"
+            app:setImageDrawable="@drawable/new_book" />
+
+        <com.example.bookspace.custom.CustomRadioButton
+            android:id="@+id/usedConditionRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/newConditionRadioButton"
+            app:layout_constraintStart_toStartOf="@+id/newConditionRadioButton"
+            app:layout_constraintTop_toBottomOf="@+id/newConditionRadioButton"
+            app:setCondition="Used"
+            app:setImageDrawable="@drawable/used_book" />
+
+        <com.example.bookspace.custom.CustomRadioButton
+            android:id="@+id/likeFairRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/usedConditionRadioButton"
+            app:layout_constraintStart_toStartOf="@+id/usedConditionRadioButton"
+            app:layout_constraintTop_toBottomOf="@+id/usedConditionRadioButton"
+            app:setCondition="Like Fair"
+            app:setImageDrawable="@drawable/fair_book" />
+
+        <TextView
+            android:id="@+id/bookConditionWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/please_select_a_condition"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#D50000"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/likeFairRadioButton" />
+
+        <Button
+            android:id="@+id/uploadBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:drawableLeft="@drawable/ic_file_upload"
+            android:drawablePadding="8dp"
+            android:text="@string/place_book_for_sale"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/bookConditionWarning"
+            app:layout_constraintStart_toStartOf="@+id/bookConditionWarning"
+            app:layout_constraintTop_toBottomOf="@+id/bookConditionWarning" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+

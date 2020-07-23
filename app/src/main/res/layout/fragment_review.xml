@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.upload.ReviewFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/photo2"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/add_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/photo3"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/add_image"
+            app:layout_constraintBottom_toBottomOf="@+id/photo2"
+            app:layout_constraintStart_toEndOf="@+id/photo2"
+            app:layout_constraintTop_toTopOf="@+id/photo2" />
+
+        <ImageView
+            android:id="@+id/photo1"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/add_image"
+            app:layout_constraintBottom_toBottomOf="@+id/photo2"
+            app:layout_constraintEnd_toStartOf="@+id/photo2"
+            app:layout_constraintTop_toTopOf="@+id/photo2" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/bookName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo2"
+            app:setLabelName="Book Name:" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/authorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookName"
+            app:setLabelName="Author:" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/bookPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/authorName"
+            app:setLabelName="Price:" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/bookPublicationYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookPrice"
+            app:setLabelName="Publication Year:" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/bookEdition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookPublicationYear"
+            app:setLabelName="Edition:" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/bookIsbnNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookEdition"
+            app:setLabelName="ISBN:" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/bookMode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookIsbnNumber"
+            app:setLabelName="Mode:" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/bookCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookMode"
+            app:setLabelName="Category:" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/bookCondition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookCategory"
+            app:setLabelName="Condition:" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/bookLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookCondition"
+            app:setLabelName="Location:" />
+
+        <ImageView
+            android:id="@+id/expectedPhoto2"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/add_image"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookLocation" />
+
+        <ImageView
+            android:id="@+id/expectedPhoto1"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/add_image"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/expectedPhoto2"
+            app:layout_constraintEnd_toStartOf="@+id/expectedPhoto2"
+            app:layout_constraintTop_toTopOf="@+id/expectedPhoto2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/expectedPhoto3"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/add_image"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/expectedPhoto2"
+            app:layout_constraintStart_toEndOf="@+id/expectedPhoto2"
+            app:layout_constraintTop_toTopOf="@+id/expectedPhoto2" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/expectedBookName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expectedPhoto2"
+            app:setLabelName="Expected Book Name:" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/expectedBookAuthor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expectedBookName"
+            app:setLabelName="Expected Book Author:" />
+
+        <com.example.bookspace.custom.CustomTextView
+            android:id="@+id/expectedBookPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expectedBookAuthor"
+            app:setLabelName="Expected Amount:" />
+
+        <Button
+            android:id="@+id/confirmBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:drawableLeft="@drawable/ic_done"
+            android:drawablePadding="8dp"
+            android:text="@string/confirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expectedBookPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
